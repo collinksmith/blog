@@ -3,7 +3,9 @@
 ---
 @charset "utf-8";
 
-
+@font-face { font-family: Chivo; src: url('../fonts/Chivo-Regular.ttf') }
+@font-face { font-family: Chivo; font-weight: 900; src: url('../fonts/Chivo-Black.ttf') }
+@font-face { font-family: Quicksand; src: url('../fonts/Quicksand-Regular.ttf') }
 
 // Our variables
 $base-font-family: 'Chivo', sans-serif;
