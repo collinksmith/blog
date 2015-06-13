@@ -78,6 +78,8 @@ h1 {
 
     a {
 
+      color: $header-text-color;
+
       &:visited {
         color: $header-text-color;
       }
