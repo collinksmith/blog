@@ -1,4 +1,5 @@
 ---
+title: "Week 1 Day 1 - Memory Match"
 tags: ruby
 ---
 
@@ -17,16 +18,10 @@ def [](row, col)
 end
 {% endhighlight %}
 
-It makes perfect sense when accessing a "board" object's 2D array from outside the class, which can be done like so:
-{% highlight ruby %}
-board[row, col]
-{% endhighlight %}
+It makes perfect sense when accessing a "board" object's 2D array from outside the class, which can be done like so:`board[row, col]`
     
-However, when accessing it from within the same class, you need to access it with self:
-{% highlight ruby %}
-self[row, col]
-{% endhighlight %}
+However, when accessing it from within the same class, you need to access it with self:`self[row, col]`
     
-This is especially confusing when the class is something like ComputerPlayer ("computer_player[row, col]" doesn't make much sense). It seemed more intuitive to type "@grid[row, col]", and it took me a while to figure out why that wasn't working. 
+This is especially confusing when the class is something like ComputerPlayer (`computer_player[row, col]` doesn't make much sense). It seemed more intuitive to type `@grid[row, col]`, and it took me a while to figure out why that wasn't working. 
 
 Maybe it's best to only use this technique for classes that specifically represent a 2D array, like board, in order to reduce confusion.
