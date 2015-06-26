@@ -15,7 +15,7 @@ If you get confused, it can be helpful to list out what you are expecting to ret
 
 {% highlight ruby %}
 subs([])     #=> [[]]          # This is the base case
-subs([1]     #=> [[],[1]]
+subs([1])     #=> [[],[1]]
 subs([1,2])  #=> [[],[1],[2],[1,2]]
 subs([1,2,3])#=> [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
 {% endhighlight %}
