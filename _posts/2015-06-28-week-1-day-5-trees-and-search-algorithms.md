@@ -1,5 +1,5 @@
 ---
-title: "Week 1 Day 1 - Trees and Search Algorithms"
+title: "Week 1 Day 5 - Trees and Search Algorithms"
 tags: ruby
 ---
 
