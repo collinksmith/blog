@@ -3,7 +3,7 @@ title: "Week 2 Day 2 - Object Oriented Design"
 tags: ruby
 ---
 
-### Polymorphism
+## Polymorphism
 
 Polymorphism is the idea of multiple types of objects being able to respond to the same message. In object oriented design, you should avoid checking the type of objects. Instead, when one object is calling a message on a variable that points to another object, you should just send it the message and not worry about what type of object it is. As long as it responds to the message, it's fine. Different objects can respond to the message in different ways, but they should fulfill the purpose of the message and return the expected result. The implementation behind that is irrelevant to the object that's sending the message.
 
@@ -11,7 +11,7 @@ A simple example is having a `Game` object that sends a `get_input` method to a 
 
 This concept is also known as duck typing, because as long as an object quacks like a duck, other objects can treat it like a duck without caring about any other details. If you need somthing to quack, just tell it to quack - as long as it accomodates your request, all is well.
 
-### Null object pattern
+## Null object pattern
 
 The null object pattern is an alternative to simply using `nil` to represent an "empty" value (e.g. a cell in a board without a piece). To implement this pattern, you simply need to create a custom class that represents the "empty" space. It should respond to methods that pieces respond to, but return appropriate values for an empty cell. This way, you can simply go through all cells in your board and call the relevant methods, and you will get an appropriate result whether there's a piece there or not. 
 
