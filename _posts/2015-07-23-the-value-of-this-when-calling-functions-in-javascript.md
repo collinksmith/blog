@@ -22,7 +22,7 @@ Callbacks are usually invoked via function style. If you pass in an object's met
 
 Even if you pass in the object via dot notation, you are just passing in a function object. You're not invoking the function via method style. The dot notation simply points you to the correct function object, which can then be invoked in any style.
 
-{% highlight ruby %}
+{% highlight javascript %}
 var foo = {
   greeting: "hello",
   
@@ -42,7 +42,7 @@ times(3, foo.yellGreeting); //prints "undefined!" 3 times
 
 You can solve this problem by using `bind`. Call `bind` on a method to manually set the value of `this` inside of it.
 
-{% highlight ruby %}
+{% highlight javascript %}
 times(3, foo.yellGreeting.bind(foo)); //prints "hello!" 3 times
 {% endhighlight %}
  
