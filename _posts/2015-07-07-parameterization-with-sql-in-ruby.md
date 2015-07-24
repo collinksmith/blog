@@ -1,5 +1,5 @@
 ---
-title: "Week 3 Day 2 - Parameterization with SQL in Ruby"
+title: "Parameterization with SQL in Ruby"
 tags: ruby, sql
 ---
 

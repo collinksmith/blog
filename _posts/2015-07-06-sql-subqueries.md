@@ -1,5 +1,5 @@
 ---
-title: "Week 3 Day 1 - SQL Subqueries"
+title: "SQL Subqueries"
 tags: sql
 ---
 

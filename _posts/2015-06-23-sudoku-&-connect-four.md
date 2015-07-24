@@ -1,5 +1,5 @@
 ---
-title: "Week 1 Day 2 - Sudoku & Connect Four"
+title: "Sudoku & Connect Four"
 tags: ruby
 ---
 

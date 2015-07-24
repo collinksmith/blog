@@ -1,5 +1,5 @@
 ---
-title: "Week 1 Day 4 - Recursion and Procs"
+title: "Recursion and Procs"
 tags: ruby
 ---
 

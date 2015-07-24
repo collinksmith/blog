@@ -1,5 +1,5 @@
 ---
-title: "Week 3 Day 3 - Rail Associations"
+title: "Rail Associations"
 tags: rails, sql
 ---
 

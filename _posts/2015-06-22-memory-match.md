@@ -1,5 +1,5 @@
 ---
-title: "Week 1 Day 1 - Memory Match"
+title: "Memory Match"
 tags: ruby
 ---
 

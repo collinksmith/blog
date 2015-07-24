@@ -1,5 +1,5 @@
 ---
-title: "Week 2 Day 2 - Object Oriented Design"
+title: "Object Oriented Design"
 tags: ruby
 ---
 

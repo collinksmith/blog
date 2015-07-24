@@ -1,5 +1,5 @@
 ---
-title: "Week 2 Day 5 - Test Doubles"
+title: "Test Doubles"
 tags: ruby, rspec, testing
 ---
 

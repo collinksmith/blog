@@ -1,5 +1,5 @@
 ---
-title: "Week 2 Day 3 - The Case Statement"
+title: "The Case Statement"
 tags: ruby
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: Week 2 Day 1 - Serialization
+title: 
+Serialization
 tags: ruby
 ---
 

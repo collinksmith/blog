@@ -1,5 +1,5 @@
 ---
-title: Week 2 Day 4 - Git
+title: "Git Basics"
 tags: git
 ---
 
