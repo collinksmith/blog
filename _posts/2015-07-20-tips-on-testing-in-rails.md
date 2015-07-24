@@ -1,6 +1,6 @@
 ---
 title: "Tips on Testing in Rails"
-tags rails, testing
+tags: rails, testing
 ---
 
 ### Factory Girl
