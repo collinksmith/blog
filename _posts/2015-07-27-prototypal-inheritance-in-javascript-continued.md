@@ -17,8 +17,8 @@ However, you end up instantiate a new `Animal` simply to construct your `Dog` cl
 ##The Solution: Surrogate
 A better solution is to combine the previous two techniques by using a surrogate class. The surrogate class' prototype is set to be a new instance of `Animal`, and `Dog`'s prototype is set to be equal to the surrogate's prototype. You can easily package this into a function to hide these details away. Here's what it looks like:
 
-{% highlight ruby %}
-function inheritcs(Child, Parent) {
+{% highlight javascript %}
+function inherits(Child, Parent) {
   function Surrogate = function () {};
   Surrogate.prototype = new Parent();
   Child.prototype = Surrogate.prototype;
@@ -31,7 +31,7 @@ To fix this, it's advisable to explicitly set the value of constructor for the c
 
 What about the code inside the `Parent` prototype? Inside the child class' constructor functon, you'll need to explicitly call the constructor function, specifying the value of `this` to be the new instance of the child class. Here's what that looks lik:
 
-{% highlight ruby %}
+{% highlight javascript %}
 function Dog (name, barkVolume) {
   Animal.call(this, name);
   this.barkVolume = barkVolume;
