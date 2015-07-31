@@ -9,11 +9,11 @@ In any javascript file you're going to load into your html, it's a good idea to 
 if (window.Snake === 'undefined') {
   window.Snake = {}
 }
-{% endhighlight %}
 
 var Board = Snake.Board = function () {
   // board stuff
 };
+{% endhighlight %}
     
 First, you check if a different file already defined window.Snake. If so, you'll just use that. Otherwise, you'll make it a new object, which you can then add things to. 
 
