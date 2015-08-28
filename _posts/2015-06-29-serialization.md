@@ -1,6 +1,5 @@
 ---
-title: 
-Serialization
+title: "Serialization"
 tags: ruby
 ---
 
