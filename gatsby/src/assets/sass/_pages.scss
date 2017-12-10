@@ -1,0 +1,84 @@
+/*
+ * PAGE: CONTACT
+ */
+
+#contact-primary {
+  width: 50%;
+  float: left;
+
+  @include media-query($on-palm) {
+    width: 100%;
+    float: none;
+  }
+}
+
+#contact-secondary {
+  width: 40%;
+  float: right;
+
+  @include media-query($on-palm) {
+    width: 100%;
+    float: none;
+  }
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.contact-info a {
+  display: block;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding: 0 0 0 30px;
+  margin: 0 0 10px;
+}
+
+.contact-info {
+  li.phone a {
+    background-image: url('../img/phone.png');
+  }
+
+  li.mail a {
+    background-image: url('../img/mail.png');
+  }
+
+  li.twitter a {
+    background-image: url('../img/twitter.png');
+  }
+}
+
+
+
+/*
+ * PAGE: ABOUT
+ */
+
+.profile-photo {
+  display: block;
+  max-width: 18%;
+  border-radius: 100%;
+  float: left;
+
+  @include media-query($on-palm) {
+    float: none;
+    max-width: none;
+    width: 150px;
+    margin: -20px auto 20px auto;
+  }
+}
+
+#text {
+  display: block;
+  float: right;
+  max-width: 78%;
+
+  @include media-query($on-palm) {
+    float: none;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@font-face { font-family: Chivo; src: url('../fonts/Chivo-Regular.ttf') }
+@font-face { font-family: Chivo; font-weight: 900; src: url('../fonts/Chivo-Black.ttf') }
+@font-face { font-family: Quicksand; src: url('../fonts/Quicksand-Regular.ttf') }
+
+// Our variables
+$base-font-family: 'Chivo', sans-serif;
+$base-font-size:   1em;
+$header-font-size: 1.2em;
+$title-font-family: 'Quicksand', sans-serif;
+$title-font-size: 1.3em;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #4E4E4E;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$green-color:      #6ab47b;
+$green-color-dark: #599868;
+$green-selected-color: #32673f;
+
+$header-text-color: #fdfdfd;
+$header-selected-color: #32673f;
+
+// Width of the content area
+$content-width:    1000px;
+
+$on-palm:          600px;
+$on-laptop:        900px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
