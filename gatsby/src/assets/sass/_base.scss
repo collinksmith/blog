@@ -194,6 +194,9 @@ pre {
     }
 }
 
+.group {
+    @extend %clearfix;
+}
 
 
 /**
