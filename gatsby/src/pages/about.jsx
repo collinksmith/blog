@@ -1,11 +1,13 @@
 import React from "react";
+import Link from "gatsby-link";
+import ProfilePhoto from "../assets/img/profile_pic.jpeg";
 
 export default function AboutPage() {
   return (
     <div className="group">
       <section id="picture">
         <img
-          src="../img/profile_pic.jpeg"
+          src={ProfilePhoto}
           alt="Photograph of Collin Smith"
           className="profile-photo"
         />
@@ -31,8 +33,7 @@ export default function AboutPage() {
         </p>
         <p>
           If you like or want to respond to something I've written, don't
-          hesitate to <a href="http://collinsmith.me/contact">let me know</a> by
-          emailing or tweeting at me!
+          hesitate to <Link to="/contact">let me know!</Link>
         </p>
       </section>
     </div>

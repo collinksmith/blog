@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "gatsby-link";
 
-export default function Header() {
+export default function Header({ data }) {
   return (
     <header className="site-header">
       <div className="header-wrapper">
         <h1>
           <Link className="site-title" to="/">
-            Collin Smith&apos;s Coding Blog
+            {data.site.siteMetadata.title}
           </Link>
         </h1>
         <nav className="site-nav">

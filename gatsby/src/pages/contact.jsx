@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ContactPage() {
+export default function ContactPage({ data }) {
   return (
     <div className="group">
       <section id="contact-primary">
@@ -11,11 +11,8 @@ export default function ContactPage() {
         <h3>Contact Details</h3>
         <ul className="contact-info">
           <li className="mail">
-            <a href="mailto:collin@collinsmith.me">collin@collinsmith.me</a>
-          </li>
-          <li className="twitter">
-            <a href="http://twitter.com/intent/tweet?screen_name=collinksmith">
-              @collinksmith
+            <a href={`mailto:${data.site.siteMetadata.email}`}>
+              {data.site.siteMetadata.email}.me
             </a>
           </li>
         </ul>
@@ -23,3 +20,13 @@ export default function ContactPage() {
     </div>
   );
 }
+
+export const query = graphql`
+  query ContactQuery {
+    site {
+      siteMetadata {
+        email
+      }
+    }
+  }
+`;
