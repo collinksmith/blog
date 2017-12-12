@@ -240,6 +240,10 @@ h1 {
     margin-left: 0;
     list-style: none;
 
+    h2 {
+        margin-top: 0;
+    }
+
     > li {
         margin-bottom: $spacing-unit;
     }

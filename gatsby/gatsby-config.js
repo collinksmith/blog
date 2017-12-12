@@ -6,5 +6,16 @@ module.exports = {
     url: `http://collinsmith.me`,
     githubUsername: `collinksmith`
   },
-  plugins: [`gatsby-plugin-react-helmet`, `gatsby-plugin-sass`]
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
+    },
+    `gatsby-transformer-remark`
+  ]
 };

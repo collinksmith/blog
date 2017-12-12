@@ -1,0 +1,12 @@
+---
+title: "Trees and Search Algorithms"
+tags: ruby
+---
+
+A tree is a type of data structure, which consists of nodes with child/parent relationships. Each node has a parent (except the root node), and each node can have zero or more children. Ruby doesn’t have a built-in way to build trees, but not too difficult to implement your own.
+
+To implement a tree, you can create a `Node` class. Each node should have a parent attribute that points to another Node object, and a "children" array that contains any number of other Node objects. The class should have a method that sets the parent of a node and updates those attributes accordingly for both the child and the new parent. Once you've implemented this class, you can create a tree by creating node objects and setting the appropriate parent/child relationshps. The tree structure then exists as a function of the relationships between the node objects.
+
+You can search trees for a value in either a breadth-first or depth-first manner. In a depth-first-search, you check a child of a node and check all of its children before you check any of the other children of the original node. You add the children you are checking into a <em>stack</em> in a last-in-first-out (LIFO) manner. When a new child is added to the stack, it must be fully searched before it can be removed from the stack. This type of search lends itself well to recursion. In performing this search recursively, the recursive stack trace effectively functions as your stack, to which you add each new child.
+
+In a breadth-first-search, you check all of the first node's children before you check any of the children below them. You add the children to a <em>queue</em> in a first-in-first-out (FIFO) manner. Once you start searching a node from the front of the queue, you search <em>all</em> of its children, adding each new child to the end of the queue. Then you remove the original node from the queue and take the next node from the front of the queue, searching all of its children and adding them to the end of the queue (after <em>all</em> the children from the original queue). This type of search is useful for finding the shortest path between a start and end point because it guarantees that there will not be any shorter paths than the one that's found.
