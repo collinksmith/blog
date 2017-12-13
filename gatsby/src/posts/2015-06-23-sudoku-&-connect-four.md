@@ -13,8 +13,8 @@ Other nice little things I learned about today:
  * `Array#rotate` - Moves all elements in an array to the left, and rotates the first elemnt to the end.
  * Making a hash from an array of 2-element arrays like so:
  
-{% highlight ruby %}
+```ruby
 a = [['name', 'bob'], ['job', 'teacher']
 Hash[a] 
 #=>; {'name' =&gt; 'bob', 'job' =&gt; 'teacher}
-{% endhighlight %}
+```

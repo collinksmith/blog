@@ -11,13 +11,13 @@ You can select DOM elements by passing css selectors, like so: `$('.class-name')
 **Running code once the document is ready**
 You don't want to run lots of JavaScript code in the browser before the rest of the page has been loaded, because this can result in a noticable delay for the user. You can ensure that your JavaScript code is only run after the HTML document has been fully loaded by passing an anonymous function to the `$` function call, like so:
 
-{% highlight javascript %}
+```javascript
 <script>
   $(function () {
     // run your JS code in here
   });
 </script>
-{% endhighlight %}
+```
   
 jQuery will call the anonymous function that you pass it only after the document has been loaded.
 

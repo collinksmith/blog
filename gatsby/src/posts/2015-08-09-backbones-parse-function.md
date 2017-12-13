@@ -9,7 +9,7 @@ By default, the parse function simply returns the response without changing it, 
 
 You might want to override the default behavior, and you can do this by defining your own parse function. For example, if you receive nested data, you might want the second-level data to populate a collection, rather than having it exist as a simple attribute of the model. Here's what that might look like, with a post having many comments nested underneath it:
 
-{% highlight javascript %}
+```javascript
 // post.js
 parse: function (response) {
   if (response.comments) {
@@ -18,6 +18,6 @@ parse: function (response) {
   }
   return response;
 }
-{% endhighlight %}
+```
     
 In this example, the `comments()` function would return a `Comments` collection, which you can then set with the data from `response.comments`. After doing this, you can delete the comment data so that it's not set in the attributes of the post.

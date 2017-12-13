@@ -7,7 +7,7 @@ When trying to center an element within another element you might not be able to
 
 Here's an example showing everything you need:
 
-{% highlight javascript %}
+```javascript
 .outer {
   width: 100%;
   text-align: center;
@@ -16,4 +16,4 @@ Here's an example showing everything you need:
 .inner {
   display: inline-block;
 }
-{% endhighlight %}
+```

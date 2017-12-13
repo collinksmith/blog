@@ -7,11 +7,11 @@ Backbone.js models are classes that allow you to use JavaScript objects to inter
 
 To set up a class, follow this syntax:
 
-{% highlight javascript %}
+```javascript
 ExampleApp.Models.Example = Backbone.Model.extend({
   urlRoot: "/example"
 });
-{% endhighlight %}
+```
 
 Backone provides built in model methods that you can use to iteract with the database. These methods use the urlRoot that you specify to construct appropriate HTTP requests, which will get sent to your controller and render JSON data that the model can use to populate the attributes of your model instance.
 
@@ -28,7 +28,7 @@ Note that the `save`, `fetch`, and `delete` methods all make ajax requests. This
 
 To accomodate this, these functions accept an object, which will automatically run the `success` or `errror` functions provided when it gets back a successful or unsuccessful HTTP response. The `success` and `error` functions will be passed the model itself and the response from the controller.
 
-{% highlight javascript %}
+```javascript
 var example = new ExampleApp.Models.Example();
 example.save({
   success: function(model, response, options) {
@@ -38,4 +38,4 @@ example.save({
     // code to be run upon a failure
   }
 });
-{% endhighlight %}
+```

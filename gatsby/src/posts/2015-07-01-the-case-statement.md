@@ -5,7 +5,7 @@ tags: ruby
 
 I had a problem today trying to use the case statement in the following way:
 
-{% highlight ruby %}
+```ruby
     case i
     when < 0
       puts "Less than 0"
@@ -14,19 +14,19 @@ I had a problem today trying to use the case statement in the following way:
     else
       puts "Zero!"
     end
-{% endhighlight %}
+```
     
 Whiel this seems like it makes sense ("when i is less than zero, print out "less than zero...") it throws a "`syntax error, unexpected '<'"`. Understanding why requires examining how the case statement works under the hood.
 
 When you call a case statement like the one above, ruby is in fact using the <em>case equaity</em> operator* to compare the variable `i` to values you specify. The case equality is written as `===` , and works similarly to `==`. In the default classes, it will return true if the two objects are equal, but also checks if the value on the right <em>is included in</em> the object on the left. For example, with ranges, it return true if the value is included in the range, like so:
 
-{% highlight ruby %}
+```ruby
 (0..2) === 1  #=> true
-{% endhighlight %}
+```
 
 When you call the case statement above, it is actually equvalent to the following if statement:
 
-{% highlight ruby %}
+```ruby
 if 0 === < i                # Syntax error!
   puts "Less than 0"
 elsif 0 === > i
@@ -34,11 +34,11 @@ elsif 0 === > i
 else
   puts "Zero!"
 end
-{% endhighlight %}
+```
     
 This makes the syntax error clear. To rewrite your request to check if i is greater than zero in a way that makes sense to the case statement, you can check if `i` <em>is included in the range of numbers from 1 to infinity</em>. You can achieve this by using the builtin `Float::INFINITY` expression, like so:
 
-{% highlight ruby %}
+```ruby
 case i
 when (-Float::INFINITY..-1)
   puts "Less than 0"
@@ -58,7 +58,7 @@ elsif (1..Float::INFINITY) === i
 else
   puts "Zero!"
 end
-{% endhighlight %}
+```
     
 In effect, you can think of the case statment as asking "is the variable equal to or included in the following expression?" Because of this behavior, a more appropriate name might be the [case subsumption operator] [1], but it's referred to as case equality in the [official Ruby docs] [2].
 

@@ -7,13 +7,13 @@ I mentioned in yesterday's post that you should always use Backbone's `events` h
 
 It's the Backbone router's job to make sure that you call the builtmethod  in `remove` method on any views that you're not using any more. This can be easily accomplished by adding a `_swapViews` function to your router:
 
-{% highlight javascript %}
+```javascript
 _swapViews(view): function () {
   _currentView && _currentView.remove();
   _currentView = view;
   this.$rootEl.html(view.render().$el);
 }
-{% endhighlight %}
+```
     
 This will first call remove on the router's `_currentView`, if it exists. It then sets the `_currentView` to the view that's passed in. Finally, it adds the new view's html to the DOM.
 

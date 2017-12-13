@@ -12,11 +12,11 @@ After we created our own index method that took care of all these details, it wa
 
 #### A common mistake (for me at least) with using the "syntactic sugar" methods to access 2D arrays
 We used this special method to make it easer to access our 2D array:
-{% highlight ruby %}
+```ruby
 def [](row, col)
   @grid[row][col]
 end
-{% endhighlight %}
+```
 
 It makes perfect sense when accessing a "board" object's 2D array from outside the class, which can be done like so:`board[row, col]`
     

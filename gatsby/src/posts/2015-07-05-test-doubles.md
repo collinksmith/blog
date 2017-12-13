@@ -11,17 +11,17 @@ In order to fully test the current object, though, you do want to make sure that
 
 Here's how to create a test double in rspec:
 
-{% highlight ruby %}
+```ruby
 let(:customer) { double("customer", :email_address => "example@email.com") }
-{% endhighlight %}
+```
 
-This means that the customer object can receive the message `:email_address`, and will return `example@email.com` in response. Your current object can use this "customer" mock to stand in for an actual Customer object. You can make sure that your Order class correctly sends the ":email_adress" message to a customer when its `send_confirmation_email` method is called like so:
+This means that the customer object can receive the message `:email_address`, and will return `example@email.com` in response. Your current object can use this "customer" mock to stand in for an actual Customer object. You can make sure that your Order class correctly sends the ":email\_adress" message to a customer when its `send_confirmation_email` method is called like so:
 
-{% highlight ruby %}
+```ruby
 expect(customer).to receive(:email_address)
 
 order.send_confirmation_email(customer)
-{% endhighlight %}
+```
     
 If your current object is sending a "command" message (a message with side effects) as opposed to a "query" message (a message without side effects that simply returns a value), then you should test that those side effects executed correctly. See [this great talk] [1] by Sandi Metz for more on where you should test things and how you should go about it, such that you ensure you only test things once.
 

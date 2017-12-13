@@ -17,6 +17,6 @@ tags: rails, testing
 
 ### Capybara
 
-* You can see what page your test is looking at by inserting the line `save_and_open_page` in your tests.
+* You can see what page your test is looking at by inserting the line `save\_and\_open\_page` in your tests.
   * NOTE: You need the `launchy` gem installed for this to work.
 

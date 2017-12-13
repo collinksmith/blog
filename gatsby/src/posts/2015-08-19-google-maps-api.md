@@ -15,7 +15,7 @@ You can customize your map via the `mapOptions` argument when creating a new map
 
 To get rid of all the control icons (except leaving a small `+` and `-` sign for zooming), you can use these map options:
 
-{% highlight javascript %}
+```javascript
 var mapOptions = {
   center: { lat: 39.5, lng: -98.35 },
   zoom: 4,
@@ -27,7 +27,7 @@ var mapOptions = {
     style: google.maps.ZoomControlStyle.SMALL
   }
 }
-{% endhighlight %}
+```
 
 [1]: https://developers.google.com/maps/
 [2]: https://snazzymaps.com/

@@ -5,7 +5,7 @@ tags: javascript
 
 In any javascript file you're going to load into your html, it's a good idea to create a distinct namespace. This helps to prevent name collisions with other files that might also be loaded into the html. For example, if you're writing a snake game, you might call your namespace `Snake`. Here's how you do it:
 
-{% highlight javascript %}
+```javascript
 if (window.Snake === 'undefined') {
   window.Snake = {}
 }
@@ -13,7 +13,7 @@ if (window.Snake === 'undefined') {
 var Board = Snake.Board = function () {
   // board stuff
 };
-{% endhighlight %}
+```
     
 First, you check if a different file already defined window.Snake. If so, you'll just use that. Otherwise, you'll make it a new object, which you can then add things to. 
 
@@ -23,7 +23,7 @@ When you load this file, you'll be able to refer to everything you specify as a 
 
 In order for this to work, you want to keep everything except for your `window.Snake` object private. You can accomplish this by wrapping the entire file in a function. But you still want to make sure all that code is executed, so you'll need to invoke it within your file. This is called an <em>immediatley invoked function expression</em>. Here's how it looks:
 
-{% highlight javascript %}
+```javascript
 ;(function () {
   if (typeof Snake === 'undefined') {
     Snake = window.Snake
@@ -32,7 +32,7 @@ In order for this to work, you want to keep everything except for your `window.S
   //put all your awesome snake code in here
   
   })();
-{% endhighlight %}
+```
       
 A couple things to note here:
 

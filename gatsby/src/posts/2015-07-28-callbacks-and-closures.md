@@ -13,7 +13,7 @@ A <em>closure</em> is a function that accesses variables that are neither passed
 
 A function definition has access to all variables in the current scope. You can create an outer function that contains local variables, then create a function inside it that uses those variables. After the outer function ends, those local variables will be unavailable. However, if you return that inner function, then you will be able to call it, and it will still have access to those local variables. Here's an example:
 
-{% highlight javascript %}
+```javascript
 function outer() {
   var secretWord = "ni";
   
@@ -33,7 +33,7 @@ secretWord;
 //=> undefined
 guessSecretWord("neeeewong");
 //=> "Wrong. The secret word is ni"
-{% endhighlight %}
+```
     
 The variables `secretWord` is undefined in the global scope, yet when you call `guessSecretWord()` in the global scope, it is able to access `secretWord` because it was available in the context in which `guessSecretWord` was defined. We say that `guessSecretWord` "closes over" `secretWord`. 
 

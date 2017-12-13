@@ -15,7 +15,7 @@ Inside the comments table in the database, you simply need
 
 We can call this abstract interface <em>commentable</em>, and use the following syntax to specify the relationships:
     
-{% highlight ruby %}
+```ruby
 class Comment < ActiveRecord::Base
   belongs_to :commentable, polymorphic: true
 end
@@ -27,6 +27,6 @@ end
 class User < ActiveRecord::Base
   has_many :comments, as: :commentable
 end
-{% endhighlight %}
+```
 
 [1]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations "Rails guides on polymorphic associations"

@@ -22,7 +22,7 @@ Callbacks are usually invoked via function style. If you pass in an object's met
 
 Even if you pass in the object via dot notation, you are just passing in a function object. You're not invoking the function via method style. The dot notation simply points you to the correct function object, which can then be invoked in any style.
 
-{% highlight javascript %}
+```javascript
 var foo = {
   greeting: "hello",
   
@@ -38,12 +38,12 @@ function times(num, func) {
 }
 
 times(3, foo.yellGreeting); //prints "undefined!" 3 times
-{% endhighlight %}
+```
 
 You can solve this problem by using `bind`. Call `bind` on a method to manually set the value of `this` inside of it.
 
-{% highlight javascript %}
+```javascript
 times(3, foo.yellGreeting.bind(foo)); //prints "hello!" 3 times
-{% endhighlight %}
+```
  
 The methods `apply` and `call` are similarly used to set the value of `this`, but they can also pass arguments into the function. `apply` accepts a single array of the arguments to pass, whereas `call` accepts each argument individually.

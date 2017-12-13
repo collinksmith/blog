@@ -9,25 +9,25 @@ To run a SQL query with the sqlite3 gem, you use the SQLite3::Database.execute m
 
 There are two ways you can use parameterization with the sqlite3 gem. The first is to provide the parameters as separate arguments, and reference them with question marks. Each successive question mark in your SQL query string will be replaced with the sanitized version of the next argument in the list.
 
-{% highlight ruby %}
+```ruby
 SQLite3::Database.execute(<<-SQL, 4, "Joe")
   SELECT *
   FROM customers
   WHERE id = ? AND name = ?
 SQL
-{% endhighlight %}
+```
 
 The `WHERE` clause above ends up being `'WHERE id = 4 AND name = Joe'`.
 
 The second way is to provide the parameters as a hash, and reference them with the key of the hash.
 
-{% highlight ruby %}
+```ruby
   SQLite3::Database.execute(<<-SQL, {:id => 4, :name => "Joe"})
     SELECT *
     FROM customers
     WHERE id = :id AND name = :name
   SQL
-{% endhighlight %}
+```
     
 This has exactly the same effect as the first example.
 

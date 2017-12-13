@@ -17,13 +17,13 @@ However, you end up instantiate a new `Animal` simply to construct your `Dog` cl
 ##The Solution: Surrogate
 A better solution is to combine the previous two techniques by using a surrogate class. The surrogate class' prototype is set to be a new instance of `Animal`, and `Dog`'s prototype is set to be equal to the surrogate's prototype. You can easily package this into a function to hide these details away. Here's what it looks like:
 
-{% highlight javascript %}
+```javascript
 function inherits(Child, Parent) {
   function Surrogate = function () {};
   Surrogate.prototype = new Parent();
   Child.prototype = Surrogate.prototype;
 };
-{% endhighlight %}
+```
     
 A quick aside: if you simply do the above, then if you call `#constructor` on an instance of the child class, it will return the parent class. This is because `constructor` is a property that's automatically set on a class' prototype, but we're overwriting the child class' `prototype`. The call to `prototype` will go to `Surrogate.prototype`, which is an instance of `Parent`, which will search the parent's prototype and find `constructor` there.
 
@@ -31,12 +31,12 @@ To fix this, it's advisable to explicitly set the value of constructor for the c
 
 What about the code inside the `Parent` prototype? Inside the child class' constructor functon, you'll need to explicitly call the constructor function, specifying the value of `this` to be the new instance of the child class. Here's what that looks lik:
 
-{% highlight javascript %}
+```javascript
 function Dog (name, barkVolume) {
   Animal.call(this, name);
   this.barkVolume = barkVolume;
 }
-{% endhighlight %}
+```
     
 This way, all the work that the parent class did to set the name property can be delegated to the parent class, and you can also specify new properties specific to the child class.
 
