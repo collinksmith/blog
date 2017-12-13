@@ -7,9 +7,12 @@ function _renderLink(currentUrl, page) {
   const pageUrl = `/${page}`;
   let className = "nav__item";
   if (currentUrl === pageUrl) className += "--current";
+  const target = page === "portfolio" ? "__blank" : "";
   return (
     <li key={pageUrl} className={className}>
-      <Link to={pageUrl}>{page}</Link>
+      <Link target={target} to={pageUrl}>
+        {page}
+      </Link>
     </li>
   );
 }
