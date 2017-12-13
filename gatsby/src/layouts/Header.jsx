@@ -1,7 +1,20 @@
 import React from "react";
 import Link from "gatsby-link";
 
-export default function Header({ data }) {
+const PAGES = ["portfolio", "about", "contact"];
+
+function _renderLink(currentUrl, page) {
+  const pageUrl = `/${page}`;
+  let className = "nav__item";
+  if (currentUrl === pageUrl) className += "--current";
+  return (
+    <li key={pageUrl} className={className}>
+      <Link to={pageUrl}>{page}</Link>
+    </li>
+  );
+}
+
+export default function Header({ data, location }) {
   return (
     <header className="site-header">
       <div className="header-wrapper">
@@ -12,15 +25,7 @@ export default function Header({ data }) {
         </h1>
         <nav className="site-nav">
           <ul className="nav">
-            <li className="nav__item">
-              <Link to="/portfolio">Portfolio</Link>
-            </li>
-            <li className="nav__item">
-              <Link to="/about">About</Link>
-            </li>
-            <li className="nav__item">
-              <Link to="/contact">Contact</Link>
-            </li>
+            {PAGES.map(_renderLink.bind(null, location.pathname))}
           </ul>
         </nav>
       </div>

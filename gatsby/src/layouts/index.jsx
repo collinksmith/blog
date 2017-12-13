@@ -3,10 +3,10 @@ import _ from "../assets/sass/main.scss";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 
-export default ({ children, data }) => {
+export default ({ children, data, location }) => {
   return (
     <div>
-      <Header data={data} />
+      <Header data={data} location={location} />
       {children()}
       <Footer data={data} />
     </div>
