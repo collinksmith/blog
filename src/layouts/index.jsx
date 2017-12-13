@@ -11,7 +11,7 @@ export default ({ children, data, location }) => {
         <div className="body-wrapper">
           <header className="post-header">
             <h1 className="page-heading">
-              {location.pathname.replace("/", "")}
+              {location.pathname.replace(/\//g, "")}
             </h1>
           </header>
           <article className="post-content">{children()}</article>
