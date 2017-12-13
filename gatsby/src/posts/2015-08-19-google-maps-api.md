@@ -9,7 +9,7 @@ Goole maps has a [well-documented][1] and easy to use API that allows you to eas
   2. Put the HTML element in the DOM
   3. Add your map to the element with this syntax: `new google.maps.Map(el, mapOptions)`
  
-It's important that the HTML element is added to the DOM before you instantate the map object in the lifecycle of your application. Also note that the enlement that houses the map needs to be given a height. By default, `div`s have a height of zero, and if you don't change this, your map will not show up on the screen.
+It's important that the HTML element is added to the DOM before you instantiate the map object in the lifecycle of your application. Also note that the enlement that houses the map needs to be given a height. By default, `div`s have a height of zero, and if you don't change this, your map will not show up on the screen.
 
 You can customize your map via the `mapOptions` argument when creating a new map. To find a color scheme, I recommend looking at [snazzy maps][2], which lets you browse maps that other people have made and gives you the code you need.
 
