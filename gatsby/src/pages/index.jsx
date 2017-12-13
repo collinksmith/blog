@@ -38,7 +38,7 @@ export const query = graphql`
           }
           fields {
             slug
-            date(formatString: "DD MMM, YYYY")
+            date(formatString: "MMM DD, YYYY")
           }
           excerpt
         }
