@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "author": "Collin Smith <collin@collinsmith.me>",
   "dependencies": {
-    "gatsby": "^1.9.127",
-    "gatsby-link": "^1.6.30",
+    "gatsby": "^1.9.277",
+    "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.15",
-    "gatsby-remark-prismjs": "^1.2.11",
-    "gatsby-source-filesystem": "^1.5.10",
-    "gatsby-transformer-remark": "^1.7.24"
+    "gatsby-remark-prismjs": "^1.2.24",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44"
   },
   "keywords": [
     "gatsby"
