@@ -1,5 +1,5 @@
 import React from "react";
-import _ from "../assets/sass/main.scss";
+import "../assets/sass/main.scss";
 import Header from "../layouts/Header.jsx";
 import Footer from "../layouts/Footer.jsx";
 import { StaticQuery, graphql } from "gatsby";
