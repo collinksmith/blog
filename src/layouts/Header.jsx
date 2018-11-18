@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "gatsby"
-
-const PAGES = ["portfolio", "about", "contact"];
+import { Link } from "gatsby";
+import { PAGES } from "../util/constants";
 
 function _renderLink(currentUrl, page) {
   const pageUrl = `/${page}`;
@@ -9,9 +8,7 @@ function _renderLink(currentUrl, page) {
   if (currentUrl === pageUrl) className += "--current";
   return (
     <li key={pageUrl} className={className}>
-      <Link to={pageUrl}>
-        {page}
-      </Link>
+      <Link to={pageUrl}>{page}</Link>
     </li>
   );
 }

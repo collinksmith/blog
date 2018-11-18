@@ -1,19 +1,22 @@
 import React from "react";
-import { graphql } from "gatsby"
+import Layout from "../components/layout";
+import { graphql } from "gatsby";
 
-export default function Post({ data }) {
-  const post = data.markdownRemark;
+export default function Post(props) {
+  const post = props.data.markdownRemark;
   return (
-    <div className="post">
-      <header className="post-header">
-        <h1 className="post-title">{post.frontmatter.title}</h1>
-        <p className="post-meta">{post.fields.date} • Collin Smith</p>
-      </header>
-      <article
-        className="post-content"
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
-    </div>
+    <Layout location={props.location}>
+      <div className="post">
+        <header className="post-header">
+          <h1 className="post-title">{post.frontmatter.title}</h1>
+          <p className="post-meta">{post.fields.date} • Collin Smith</p>
+        </header>
+        <article
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
+    </Layout>
   );
 }
 
