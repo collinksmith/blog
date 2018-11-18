@@ -5,7 +5,6 @@
   "author": "Collin Smith <collin@collinsmith.me>",
   "dependencies": {
     "gatsby": "^2.0.50",
-    "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.4",
     "gatsby-remark-prismjs": "^3.0.3",
