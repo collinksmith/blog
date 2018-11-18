@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Layout from "../components/layout";
 
 function _renderPostSummary({ node }) {
   return (
@@ -14,14 +15,16 @@ function _renderPostSummary({ node }) {
   );
 }
 
-export default function IndexPage({ data }) {
+export default function IndexPage(props) {
   return (
-    <div className="home">
-      <h1 className="post-title">Posts</h1>
-      <ul className="post-list">
-        {data.allMarkdownRemark.edges.map(_renderPostSummary)}
-      </ul>
-    </div>
+    <Layout location={props.location}>
+      <div className="home">
+        <h1 className="post-title">Posts</h1>
+        <ul className="post-list">
+          {props.data.allMarkdownRemark.edges.map(_renderPostSummary)}
+        </ul>
+      </div>
+    </Layout>
   );
 }
 

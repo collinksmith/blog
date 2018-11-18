@@ -1,11 +1,14 @@
 import React from "react";
+import Layout from "../components/layout";
 
-export default function PortfolioPage({ data }) {
+export default function PortfolioPage(props) {
   return (
-    <div className="group">
-      <section id="contact-primary">
-        <p>Under construction.</p>
-      </section>
-    </div>
+    <Layout location={props.location}>
+      <div className="group">
+        <section id="contact-primary">
+          <p>Under construction.</p>
+        </section>
+      </div>
+    </Layout>
   );
 }
