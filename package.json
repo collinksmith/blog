@@ -6,11 +6,11 @@
   "dependencies": {
     "gatsby": "^2.0.50",
     "gatsby-link": "^1.6.46",
-    "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sass": "^1.0.15",
-    "gatsby-remark-prismjs": "^1.2.24",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sass": "^2.0.4",
+    "gatsby-remark-prismjs": "^3.0.3",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-remark": "^2.1.12",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
