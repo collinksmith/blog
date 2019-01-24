@@ -1,8 +1,10 @@
+import { graphql, StaticQuery } from "gatsby";
 import React from "react";
+import Helmet from "react-helmet";
+import personalLogo from "../assets/img/personal-logo.png";
 import "../assets/sass/main.scss";
-import Header from "../layouts/Header.jsx";
 import Footer from "../layouts/Footer.jsx";
-import { StaticQuery, graphql } from "gatsby";
+import Header from "../layouts/Header.jsx";
 import { PAGES } from "../util/constants";
 
 export default ({ children, data, location }) => {
@@ -23,6 +25,10 @@ export default ({ children, data, location }) => {
       `}
       render={data => (
         <div>
+          <Helmet
+            title="Collin Smith's Coding Blog"
+            link={[{ rel: "icon", type: "image/png", href: `${personalLogo}` }]}
+          />
           <Header data={data} location={location} />
           <div className="page-content">
             <div className="body-wrapper">
