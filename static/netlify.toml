@@ -1,7 +1,9 @@
 [[redirects]]
   from = "/asteroids"
   to = "http://collinksmith.github.io/asteroids/"
+  fore = true
 
 [[redirects]]
   from = "/portfolio"
   to = "http://collinksmith.github.io/portfolio/"
+  fore = true
