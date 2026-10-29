@@ -30,7 +30,7 @@ export default function IndexPage(props) {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: { date: DESC } }) {
       totalCount
       edges {
         node {
